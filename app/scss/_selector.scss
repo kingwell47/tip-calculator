@@ -4,12 +4,13 @@
 .selector {
 
     label {
-        font-size: fnc.rem(11);
+        font-size: fnc.rem(16);
         font-weight: 700;
-        color: var(--veryDarkCyan);
+        color: var(--darkGrayishCyan1);
     }
 
     input {
+        padding: 0 fnc.rem(17);
         height: fnc.rem(48);
         text-align: right;
         font-family: var(--font);
@@ -25,22 +26,38 @@
     &__bill-total {
         display: flex;
         flex-direction: column;
+        
     }
 
     &__tip-select {
-
+        margin-bottom: fnc.rem(38);
 
     }
 
     &__buttons {
         button {
-            // width: fnc.rem(147);
-            // height: fnc.rem(48);
+            border: none;
+            border-radius: fnc.rem(5);
+            font-family: var(--font);
+            font-size: fnc.rem(17);
+            font-weight: 700;
+            color: var(--white);
+            background-color: var(--veryDarkCyan);
         }
+
+        input {
+            width: fnc.rem(147);
+        }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: fnc.rem(16);
 
     }
 
     &__people-number {
-
+        display: flex;
+        flex-direction: column;
     }
 }
