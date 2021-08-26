@@ -1,0 +1,46 @@
+@use 'functions' as fnc;
+@use 'breakpoints' as mix;
+
+.selector {
+
+    label {
+        font-size: fnc.rem(11);
+        font-weight: 700;
+        color: var(--veryDarkCyan);
+    }
+
+    input {
+        height: fnc.rem(48);
+        text-align: right;
+        font-family: var(--font);
+        font-size: fnc.rem(17);
+        color: var(--veryDarkCyan);
+        font-weight: 700;
+        background-color: var(--lightGrayishCyan2);
+        border: none;
+        border-radius: fnc.rem(5);
+
+    }
+
+    &__bill-total {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tip-select {
+
+
+    }
+
+    &__buttons {
+        button {
+            // width: fnc.rem(147);
+            // height: fnc.rem(48);
+        }
+
+    }
+
+    &__people-number {
+
+    }
+}

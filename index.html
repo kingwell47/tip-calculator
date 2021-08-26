@@ -19,26 +19,59 @@
   </style>
 </head>
 <body>
+  <header class="logo">
+    <img src="images/logo.svg" alt="Splitter Logo">
+  </header>
+  <main class="container">
+    <div class="component">
+      <section class="selector">
+        <div class="selector__bill-total">
+          <label for="bill-total-display">Bill</label>
+          <input type="number" id="bill-total-display" placeholder="0" disabled>
+        </div>
+        
 
-  Bill
+        <div class="selector__tip-select">
+          <label for="tip-select-buttons">Select Tip %</label>         
+          <div class="selector__buttons" id="tip-select-buttons">
+            <button class="percentage">5%</button>
+            <button class="percentage">10%</button>
+            <button class="percentage">15%</button>
+            <button class="percentage">25%</button>
+            <button class="percentage">50%</button>
+            <input type="number" placeholder="Custom">
+          </div>
+        </div>
+        
+        <div class="selector__people-number">
+          <label for="number-of-people">Number of People </label>
+          <input id="number-of-people" type="number" placeholder="0">
+        </div>
+        
+      
+        
+        
+        
+        
+        
+        
+      
+      
+        
+      </section>
+      
+      Tip Amount
+      / person
+    
+      Total
+      / person
+    
+      Reset   
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
 
-  Number of People
+    </div>    
+  </main>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

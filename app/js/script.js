@@ -1,1 +1,1 @@
-console.log("Calculator test");
+console.log("Calculator test script");

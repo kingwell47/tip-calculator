@@ -1,3 +1,19 @@
+@use 'functions' as fnc;
+
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan1: hsl(186, 14%, 43%);
+    --darkGrayishCyan2: hsl(184, 14%, 56%);
+    --lightGrayishCyan1: hsl(185, 41%, 84%);
+    --lightGrayishCyan2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    //fonts
+    --font: 'Space Mono', monospace;;
+}
+
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -10,5 +26,13 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono', monospace;
+    background-color: var(--lightGrayishCyan1);
+    font-family: var(--font);
+    font-size: fnc.rem(24);
+
+}
+
+.container {
+    max-width: fnc.rem(920);
+    margin: auto;    
 }
