@@ -25,28 +25,39 @@
   <main class="container">
     <div class="component">
       <section class="selector">
-        <div class="selector__bill-total">
-          <label for="bill-total-display">Bill</label>
-          <input type="number" id="bill-total-display" min="0" placeholder="0">
-        </div>
         
-
-        <div class="selector__tip-select">
-          <label for="tip-select-buttons">Select Tip %</label>         
-          <div class="selector__buttons" id="tip-select-buttons">
-            <button class="percentage">5%</button>
-            <button class="percentage">10%</button>
-            <button class="percentage">15%</button>
-            <button class="percentage">25%</button>
-            <button class="percentage">50%</button>
-            <input type="number" placeholder="Custom">
+        <form action="" id="tip-input">
+          <div class="selector__bill-total">
+            <label for="bill-total-display">Bill</label>
+            <span class="input_icon"><img src="/images/icon-dollar.svg" alt="Dollar Sign"></span>
+            <input type="number" id="bill-total-display" min="0" placeholder="0">
           </div>
-        </div>
-        
-        <div class="selector__people-number">
-          <label for="number-of-people">Number of People </label>
-          <input id="number-of-people" type="number" min="1" placeholder="0">
-        </div>    
+          
+          <div class="selector__selection">
+            <label for="tip-select">Select Tip %</label>
+            <div class="selector__select" id="tip-select">
+                <input class="selector__value" type="radio" name="tip" value="5" id="five-percent">
+                <label class="selector__label" for="five-percent">5%</label>              
+                <input class="selector__value" type="radio" name="tip" value="10" id="ten-percent">
+                <label class="selector__label" for="ten-percent">10%</label>              
+                <input class="selector__value" type="radio" name="tip" value="15" id="fifteen-percent">
+                <label class="selector__label" for="fifteen-percent">15%</label>              
+                <input class="selector__value" type="radio" name="tip" value="25" id="twenty-five-percent">
+                <label class="selector__label" for="twenty-five-percent">25%</label>              
+                <input class="selector__value" type="radio" name="tip" value="50" id="fifty-percent">
+                <label class="selector__label" for="fifty-percent">50%</label>                           
+                <input class="selector__custom" type="number" placeholder="Custom">
+            </div>
+          </div>
+          
+          
+          <div class="selector__people-number">
+            <label for="number-of-people">Number of People </label>
+            <span class="input_icon"><img src="/images/icon-person.svg" alt="Person"></span>
+            <input id="number-of-people" type="number" min="1" placeholder="0">
+          </div> 
+
+        </form>
 
       </section>
       
@@ -71,7 +82,7 @@
             <div class="result__amount" id="tip-total">0.00</div>
           </div>
         </div>
-        <button id="reset">
+        <button id="reset" disabled>
           Reset   
         </button>
                 

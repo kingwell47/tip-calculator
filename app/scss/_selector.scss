@@ -14,6 +14,11 @@
         color: var(--darkGrayishCyan1);
     }
 
+    .input_icon {
+        position: absolute;
+    }
+
+
     input {
         padding-right: fnc.rem(17);
         height: fnc.rem(48);
@@ -25,41 +30,44 @@
         background-color: var(--lightGrayishCyan2);
         border: none;
         border-radius: fnc.rem(5);
+        cursor: pointer;
+
+        &:hover {
+            border: fnc.rem(2) solid var(--strongCyan);
+        }
+        
     }
 
     &__bill-total {
         display: flex;
         flex-direction: column;
+        position: relative;
 
         input {
             margin-bottom: fnc.rem(28);
         }
+        span {
+            left: 6%;
+            top: 28%;
+        }
         
     }
 
-    &__tip-select {
+    &__selection {
         margin-bottom: fnc.rem(38);
-
     }
 
-    &__buttons {
+    &__value {
+        display: none;
+
+        &:checked + .selector__label {
+            background-color: var(--strongCyan);
+            color: var(--veryDarkCyan);
+        }
+    }  
+
+    &__select {
         margin-top: fnc.rem(12);
-        button {
-            border: none;
-            border-radius: fnc.rem(5);
-            font-family: var(--font);
-            font-size: fnc.rem(24);
-            font-weight: 700;
-            color: var(--white);
-            background-color: var(--veryDarkCyan);
-        }
-
-        input {
-            width: 100%;
-            margin-bottom: 0;
-
-        }
-
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -70,10 +78,46 @@
             grid-template-rows: repeat(2, 1fr);
         }
 
+        > label {
+            border-radius: fnc.rem(5);
+            padding-top: fnc.rem(6);
+            font-family: var(--font);
+            font-size: fnc.rem(24);
+            font-weight: 700;
+            color: var(--white);
+            background-color: var(--veryDarkCyan);
+            text-align: center;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                background-color: var(--hoverCyan);
+                color: var(--veryDarkCyan);
+            }
+        }        
     }
+
+    &__custom {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+      
 
     &__people-number {
         display: flex;
         flex-direction: column;
+        position: relative;
+
+        input {
+            &:invalid {
+                border: fnc.rem(2) solid orange;
+            }
+        }
+
+        span {
+            left: 6%;
+            top: 40%;
+        }
     }
 }

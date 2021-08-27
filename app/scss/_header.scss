@@ -1,6 +1,13 @@
 @use 'functions' as fnc;
+@use 'breakpoints' as mix;
 
 .logo {
     text-align: center;
     margin: fnc.rem(40) auto;
+
+    @include mix.breakpoint-up(medium) {
+        margin-top: fnc.rem(162);
+        margin-bottom: fnc.rem(87);
+
+    }
 }
