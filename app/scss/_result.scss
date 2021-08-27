@@ -3,6 +3,11 @@
 
 .result {
     flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: fnc.rem(327);
+    max-width: fnc.rem(413);
     background-color: var(--veryDarkCyan);
     padding: fnc.rem(24);
     border-radius: fnc.rem(14);

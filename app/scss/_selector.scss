@@ -4,6 +4,9 @@
 .selector {
     flex: 50%;
     margin-bottom: fnc.rem(33);
+    min-width: fnc.rem(327);
+    max-width: fnc.rem(379);
+    
 
     label {
         font-size: fnc.rem(16);
@@ -12,7 +15,7 @@
     }
 
     input {
-        padding: 0 fnc.rem(17);        
+        padding-right: fnc.rem(17);
         height: fnc.rem(48);
         text-align: right;
         font-family: var(--font);
@@ -22,8 +25,6 @@
         background-color: var(--lightGrayishCyan2);
         border: none;
         border-radius: fnc.rem(5);
-        
-
     }
 
     &__bill-total {
@@ -56,13 +57,18 @@
         input {
             width: 100%;
             margin-bottom: 0;
-            
+
         }
 
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
         gap: fnc.rem(16);
+
+        @include mix.breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
 
     }
 

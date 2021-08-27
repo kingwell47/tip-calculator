@@ -2,14 +2,24 @@
 @use 'breakpoints' as mix;
 
 .component {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;    
     background-color: var(--white);
+    min-width: fnc.rem(375);
     border-radius: fnc.rem(21);
     padding: fnc.rem(32);
+    justify-content: space-between;
+    gap: fnc.rem(48);
+
+    @include mix.breakpoint-down(small) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        
+    }
 
     @include mix.breakpoint-up(large) {
         padding: fnc.rem(32) fnc.rem(32) fnc.rem(32) fnc.rem(48);
+        justify-content: space-between;
     }
 
 }
