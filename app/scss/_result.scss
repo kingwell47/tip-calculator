@@ -40,10 +40,22 @@
     }
 
     &__amount {
+        font-family: var(--font);
         font-size: fnc.rem(32);
+        border: none;
+        background: transparent;
         color: var(--strongCyan);
         font-weight: 700;
+        text-align: right;
+        width: 50%;
         
+        &::placeholder {
+            color: var(--strongCyan);
+        }
+
+        &:focus-visible {
+            border: none;
+        }
 
     }
 

@@ -23,14 +23,13 @@
     <img src="images/logo.svg" alt="Splitter Logo">
   </header>
   <main class="container">
-    <div class="component">
-      <section class="selector">
-        
-        <form action="" id="tip-input">
+    <form id="tip-calculator">
+    <div class="component">      
+      <section class="selector">        
           <div class="selector__bill-total">
-            <label for="bill-total-display">Bill</label>
-            <span class="input_icon"><img src="/images/icon-dollar.svg" alt="Dollar Sign"></span>
-            <input type="number" id="bill-total-display" min="0" placeholder="0">
+            <label for="bill-total">Bill</label>
+            <span class="input_icon"><img src="images/icon-dollar.svg" alt="Dollar Sign"></span>
+            <input type="number" id="bill-total" min="0" placeholder="0">
           </div>
           
           <div class="selector__selection">
@@ -46,18 +45,16 @@
                 <label class="selector__label" for="twenty-five-percent">25%</label>              
                 <input class="selector__value" type="radio" name="tip" value="50" id="fifty-percent">
                 <label class="selector__label" for="fifty-percent">50%</label>                           
-                <input class="selector__custom" type="number" placeholder="Custom">
+                <input class="selector__custom" id="custom-tip" type="number" placeholder="Custom">
             </div>
           </div>
           
           
           <div class="selector__people-number">
             <label for="number-of-people">Number of People </label>
-            <span class="input_icon"><img src="/images/icon-person.svg" alt="Person"></span>
+            <span class="input_icon"><img src="images/icon-person.svg" alt="Person"></span>
             <input id="number-of-people" type="number" min="1" placeholder="0">
-          </div> 
-
-        </form>
+          </div>        
 
       </section>
       
@@ -70,7 +67,7 @@
                 / person            
               </span>
             </label>
-            <div class="result__amount" id="tip-amount">0.00</div>
+            <input type="number" class="result__amount" id="tip-amount" placeholder="0.00" readonly>
           </div>
           <div class="result__element">
             <label for="tip-total">
@@ -79,23 +76,25 @@
                 / person 
               </span>          
             </label>
-            <div class="result__amount" id="tip-total">0.00</div>
+            <input type="number" class="result__amount" id="tip-total" placeholder="0.00" readonly>
           </div>
         </div>
-        <button id="reset" disabled>
+        <button id="btnReset" type="reset" disabled>
           Reset   
         </button>
                 
       </section>
 
 
-    </div>    
+    </div>
+    
+  </form>
   </main>
 
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.kingwell47.com" target="_blank">Joel P. Doctor</a>.
   </div>
   <script src="/dist/script.js"></script>
 </body>
