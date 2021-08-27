@@ -1,0 +1,54 @@
+@use 'functions' as fnc;
+@use 'breakpoints' as mix;
+
+.result {
+    flex: 50%;
+    background-color: var(--veryDarkCyan);
+    padding: fnc.rem(24);
+    border-radius: fnc.rem(14);
+    padding-top: fnc.rem(45);
+
+    label {
+        display: flex;
+        flex-direction: column;
+        font-size: fnc.rem(16);
+        font-weight: 700;
+        color: var(--white);
+
+    }
+
+    span {
+        font-size: fnc.rem(12);
+        color: var(--darkGrayishCyan2);
+
+    }
+
+    &__element {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: fnc.rem(20);
+
+    }
+
+    &__amount {
+        font-size: fnc.rem(32);
+        color: var(--strongCyan);
+        font-weight: 700;
+        
+
+    }
+
+    button {
+        background-color: var(--strongCyan);
+        height: fnc.rem(48);
+        width: 100%;
+        border: none;
+        border-radius: fnc.rem(5);
+        font-family: var(--font);
+        font-size: fnc.rem(20);
+        font-weight: 700;
+        color: var(--veryDarkCyan);
+        text-transform: uppercase;
+
+    }
+}

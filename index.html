@@ -46,27 +46,35 @@
         <div class="selector__people-number">
           <label for="number-of-people">Number of People </label>
           <input id="number-of-people" type="number" placeholder="0">
-        </div>
-        
-      
-        
-        
-        
-        
-        
-        
-      
-      
-        
+        </div>    
+
       </section>
       
-      Tip Amount
-      / person
-    
-      Total
-      / person
-    
-      Reset   
+      <section class="result">
+        
+        <div class="result__element">
+          <label for="tip-amount">
+            Tip Amount
+            <span>
+              / person            
+            </span>
+          </label>
+          <div class="result__amount" id="tip-amount">0.00</div>
+        </div>
+        <div class="result__element">
+          <label for="tip-total">
+            Total
+            <span>
+              / person 
+            </span>          
+          </label>
+          <div class="result__amount" id="tip-total">0.00</div>
+        </div>
+        <button id="reset">
+          Reset   
+        </button>
+                
+      </section>
 
 
     </div>    

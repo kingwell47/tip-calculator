@@ -2,13 +2,13 @@
 @use 'breakpoints' as mix;
 
 .component {
-    
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--white);
     border-radius: fnc.rem(21);
     padding: fnc.rem(32);
 
     @include mix.breakpoint-up(large) {
-        height: fnc.rem(480);
         padding: fnc.rem(32) fnc.rem(32) fnc.rem(32) fnc.rem(48);
     }
 
