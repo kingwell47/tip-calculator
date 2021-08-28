@@ -14,10 +14,6 @@
         color: var(--darkGrayishCyan1);
     }
 
-    .input_icon {
-        position: absolute;
-    }
-
 
     input {
         padding-right: fnc.rem(17);
@@ -31,11 +27,19 @@
         border: none;
         border-radius: fnc.rem(5);
         cursor: pointer;
-        transition: border 300ms ease-in-out;
+        transition: border 150ms ease-in-out;
+
+        &:focus-visible {
+            outline-color: var(--veryDarkCyan);            
+        }
 
         &:hover {
             border: fnc.rem(2) solid var(--strongCyan);
         }
+
+        &:invalid {
+                border: fnc.rem(2) solid var(--invalidOrange);
+            }
         
     }
 
@@ -44,14 +48,23 @@
         flex-direction: column;
         position: relative;
 
+        label {
+            display: flex;
+            justify-content: space-between
+        }
+        span {
+            text-align: right;
+            color: var(--invalidOrange);
+        }       
+
         input {
             margin-bottom: fnc.rem(28);
         }
-        span {
+        #dollar-icon {
+            position: absolute;
             left: 6%;
             top: 28%;
-        }
-        
+        }        
     }
 
     &__selection {
@@ -110,13 +123,18 @@
         flex-direction: column;
         position: relative;
 
-        input {
-            &:invalid {
-                border: fnc.rem(2) solid orange;
-            }
+        label {
+            display: flex;
+            justify-content: space-between
         }
 
         span {
+            text-align: right;
+            color: var(--invalidOrange);
+        }       
+
+        #person-icon {
+            position: absolute;
             left: 6%;
             top: 40%;
         }
