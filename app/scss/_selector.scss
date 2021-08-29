@@ -43,6 +43,13 @@
         
     }
 
+    .error_message {
+        text-align: right;
+        font-size: fnc.rem(16);
+        font-weight: 700;
+        color: var(--invalidOrange);
+    }
+
     &__bill-total {
         display: flex;
         flex-direction: column;
@@ -51,11 +58,7 @@
         label {
             display: flex;
             justify-content: space-between
-        }
-        span {
-            text-align: right;
-            color: var(--invalidOrange);
-        }       
+        }             
 
         input {
             margin-bottom: fnc.rem(28);
@@ -86,6 +89,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
         gap: fnc.rem(16);
+        position: relative;
 
         @include mix.breakpoint-up(large) {
             grid-template-columns: repeat(3, 1fr);
@@ -107,8 +111,14 @@
             &:hover {
                 background-color: var(--hoverCyan);
                 color: var(--veryDarkCyan);
-            }
-        }        
+            }            
+        }
+        
+        .error_message {
+            position: absolute;
+            bottom: fnc.rem(44);
+            right: 0;            
+        }
     }
 
     &__custom {
@@ -126,11 +136,6 @@
         label {
             display: flex;
             justify-content: space-between
-        }
-
-        span {
-            text-align: right;
-            color: var(--invalidOrange);
         }       
 
         #person-icon {
