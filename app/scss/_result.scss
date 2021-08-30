@@ -44,7 +44,11 @@
         font-size: fnc.rem(32);
         color: var(--strongCyan);
         font-weight: 700;
-        text-align: right;      
+        text-align: right;
+        
+        @include mix.breakpoint-up(medium) {
+            font-size: fnc.rem(42);
+        }
         
 
     }
