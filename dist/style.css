@@ -238,6 +238,11 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 700;
   text-align: right;
 }
+@media (min-width: 40em) {
+  .result__amount {
+    font-size: 2.625rem;
+  }
+}
 .result button {
   background-color: var(--strongCyan);
   height: 3rem;
