@@ -50,6 +50,9 @@
             font-size: fnc.rem(42);
         }
         
+        @include mix.breakpoint-up(medium) {
+            font-size: fnc.rem(42);
+        }
 
     }
 
