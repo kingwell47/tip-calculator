@@ -1,102 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/style.css">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header class="logo">
-    <img src="images/logo.svg" alt="Splitter Logo">
-  </header>
-  <main class="container">
-    <form id="tip-calculator">
-    <div class="component">      
-      <section class="selector">        
-          <div class="selector__bill-total">
-            <label for="bill-total">Bill <span class="error_message" id="invalid-bill"></span></label>
-            <span id="dollar-icon"><img src="images/icon-dollar.svg" alt="Dollar Sign"></span>
-            <input type="number" id="bill-total" min="0" placeholder="0" step="0.01">
-          </div>
-          
-          <div class="selector__selection">
-            <label for="tip-select">Select Tip %</label>
-            <div class="selector__select" id="tip-select">
-                <input class="selector__value" type="radio" name="tip" value="5" id="five-percent">
-                <label class="selector__label" for="five-percent">5%</label>              
-                <input class="selector__value" type="radio" name="tip" value="10" id="ten-percent">
-                <label class="selector__label" for="ten-percent">10%</label>              
-                <input class="selector__value" type="radio" name="tip" value="15" id="fifteen-percent">
-                <label class="selector__label" for="fifteen-percent">15%</label>              
-                <input class="selector__value" type="radio" name="tip" value="25" id="twenty-five-percent">
-                <label class="selector__label" for="twenty-five-percent">25%</label>              
-                <input class="selector__value" type="radio" name="tip" value="50" id="fifty-percent">
-                <label class="selector__label" for="fifty-percent">50%</label>                           
-                <input class="selector__custom" id="custom-tip" type="number" min="0" max="100" placeholder="Custom">
-                <span class="error_message"></span>
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="Splitter Logo" />
+    </header>
+    <main class="container">
+      <form id="tip-calculator">
+        <div class="component">
+          <section class="selector">
+            <div class="selector__bill-total">
+              <label for="bill-total"
+                >Bill <span class="error_message" id="invalid-bill"></span
+              ></label>
+              <span id="dollar-icon"
+                ><img src="images/icon-dollar.svg" alt="Dollar Sign"
+              /></span>
+              <input
+                type="number"
+                id="bill-total"
+                min="0"
+                placeholder="0"
+                step="0.01"
+              />
             </div>
-          </div>
-          
-          
-          <div class="selector__people-number">
-            <label for="number-of-people">Number of People <span class="error_message" id="invalid-people"></span></label>
-            <span id="person-icon"><img src="images/icon-person.svg" alt="Person"></span>
-            <input id="number-of-people" type="number" min="1" placeholder="0" step="1">
-          </div>        
 
-      </section>
-      
-      <section class="result">
-        <div class="result-wrapper">
-          <div class="result__element">
-            <label for="tip-amount">
-              Tip Amount
-              <span>
-                / person            
-              </span>
-            </label>
-            <div class="result__amount" id="tip-amount">$0.00</div>
-          </div>
-          <div class="result__element">
-            <label for="tip-total">
-              Total
-              <span>
-                / person 
-              </span>          
-            </label>
-            <div class="result__amount" id="tip-total">$0.00</div>
-          </div>
+            <div class="selector__selection">
+              <label for="tip-select">Select Tip %</label>
+              <div class="selector__select" id="tip-select">
+                <input
+                  class="selector__value"
+                  type="radio"
+                  name="tip"
+                  value="5"
+                  id="five-percent"
+                />
+                <label class="selector__label" for="five-percent">5%</label>
+                <input
+                  class="selector__value"
+                  type="radio"
+                  name="tip"
+                  value="10"
+                  id="ten-percent"
+                />
+                <label class="selector__label" for="ten-percent">10%</label>
+                <input
+                  class="selector__value"
+                  type="radio"
+                  name="tip"
+                  value="15"
+                  id="fifteen-percent"
+                />
+                <label class="selector__label" for="fifteen-percent">15%</label>
+                <input
+                  class="selector__value"
+                  type="radio"
+                  name="tip"
+                  value="25"
+                  id="twenty-five-percent"
+                />
+                <label class="selector__label" for="twenty-five-percent"
+                  >25%</label
+                >
+                <input
+                  class="selector__value"
+                  type="radio"
+                  name="tip"
+                  value="50"
+                  id="fifty-percent"
+                />
+                <label class="selector__label" for="fifty-percent">50%</label>
+                <input
+                  class="selector__custom"
+                  id="custom-tip"
+                  type="number"
+                  min="0"
+                  max="100"
+                  placeholder="Custom"
+                />
+                <span class="error_message"></span>
+              </div>
+            </div>
+
+            <div class="selector__people-number">
+              <label for="number-of-people"
+                >Number of People
+                <span class="error_message" id="invalid-people"></span
+              ></label>
+              <span id="person-icon"
+                ><img src="images/icon-person.svg" alt="Person"
+              /></span>
+              <input
+                id="number-of-people"
+                type="number"
+                min="1"
+                placeholder="0"
+                step="1"
+              />
+            </div>
+          </section>
+
+          <section class="result">
+            <div class="result-wrapper">
+              <div class="result__element">
+                <label for="tip-amount">
+                  Tip Amount
+                  <span> / person </span>
+                </label>
+                <div class="result__amount" id="tip-amount">$0.00</div>
+              </div>
+              <div class="result__element">
+                <label for="tip-total">
+                  Total
+                  <span> / person </span>
+                </label>
+                <div class="result__amount" id="tip-total">$0.00</div>
+              </div>
+            </div>
+            <button id="btnReset" type="reset" disabled>Reset</button>
+          </section>
         </div>
-        <button id="btnReset" type="reset" disabled>
-          Reset   
-        </button>
-                
-      </section>
+      </form>
+    </main>
 
-
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.joeldoctor.com" target="_blank">Joel P. Doctor</a>.
     </div>
-    
-  </form>
-  </main>
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.kingwell47.com" target="_blank">Joel P. Doctor</a>.
-  </div>
-  <script src="dist/script.js"></script>
-</body>
+    <script src="dist/script.js"></script>
+  </body>
 </html>
